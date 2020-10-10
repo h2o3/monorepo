@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+      annotations:
+        linkerd.io/inject: enabled
+    spec:
+      containers:
+        - name: server
+          image: docker.io/zhzhxtrrk/fn:server
+          ports:
+            - containerPort: 9000
+              name: grpc

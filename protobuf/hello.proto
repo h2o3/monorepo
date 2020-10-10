@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package com.h2o3.demo.protobuf;
+
+option go_package = "h2o3.com/demo/protobuf";
+
+message Hello {
+  string name = 1;
+}
+
+message Message {
+  string message = 1;
+}
+
+service HelloService {
+  rpc sayHello(Hello) returns (Message);
+}
