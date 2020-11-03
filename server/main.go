@@ -6,6 +6,8 @@ import (
 	"log"
 	"net"
 
+	_ "time/tzdata"
+
 	"google.golang.org/grpc"
 	"h2o3.com/demo/protobuf"
 )
