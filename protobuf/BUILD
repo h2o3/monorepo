@@ -18,7 +18,6 @@ go_proto_library(
 
 go_library(
     name = "protobuf",
-    srcs = ["protobuf.go"],
     embed = [":hello_go_proto"],
     importpath = "h2o3.com/demo/protobuf",
     visibility = ["//visibility:public"],
